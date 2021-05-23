@@ -24,6 +24,225 @@
     src: url("../fonts/poppins/Poppins-Italic.ttf");
     font-style: italic;
   }
+  .App {
+    font-family: "Poppins";
+    font-size: 14px;
+    color: #242429;
+  }
+  .App button {
+    padding: 10px 20px 10px 20px;
+    border-radius: 20px;
+    border: 1px solid transparent;
+    cursor: pointer;
+  }
+  nav {
+    position: fixed;
+    z-index: 999;
+    min-height: 80px;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background-color: white;
+    -webkit-box-shadow: 0px 5px 15px rgba(36, 36, 41, 0.04);
+            box-shadow: 0px 5px 15px rgba(36, 36, 41, 0.04);
+  }
+  nav .content {
+    width: 90%;
+  }
+  nav .content .normal {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    height: 80px;
+  }
+  nav .content .normal .logo {
+    width: 30%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  nav .content .normal .logo img {
+    width: 150px;
+  }
+  nav .content .normal .search {
+    width: 40%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  nav .content .normal .search .action-search:hover {
+    -webkit-box-shadow: 0px 3px 12px rgba(36, 36, 41, 0.1);
+            box-shadow: 0px 3px 12px rgba(36, 36, 41, 0.1);
+  }
+  nav .content .normal .search .action-search {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-shadow: 0px 3px 6px rgba(36, 36, 41, 0.08);
+            box-shadow: 0px 3px 6px rgba(36, 36, 41, 0.08);
+    height: 45px;
+    width: 300px;
+    border-radius: 20px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 5px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    cursor: pointer;
+  }
+  nav .content .normal .search .action-search .text {
+    width: 250px;
+  }
+  nav .content .normal .search .action-search .text h4 {
+    margin-left: 20px;
+    color: #898989;
+  }
+  nav .content .normal .search .action-search .circle {
+    width: 30px;
+    height: 30px;
+    background-color: #FBA020;
+    border-radius: 100%;
+    color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-right: 5px;
+    -webkit-box-shadow: 0px 10px 20px rgba(251, 160, 32, 0.2);
+            box-shadow: 0px 10px 20px rgba(251, 160, 32, 0.2);
+  }
+  nav .content .normal .search ul {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  nav .content .normal .search ul li {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0px 20px 0px 20px;
+    cursor: pointer;
+    position: relative;
+  }
+  nav .content .normal .search ul li a {
+    font-size: 16px;
+    text-decoration: none;
+    margin-bottom: 5px;
+    color: #898989;
+  }
+  nav .content .normal .search ul li hr {
+    position: absolute;
+    width: 15px;
+    height: 2px;
+    background-color: transparent;
+    border: none;
+    -webkit-transition: 200ms;
+    transition: 200ms;
+    bottom: 15px;
+  }
+  nav .content .normal .search ul li:hover hr {
+    -webkit-transition: 200ms;
+    transition: 200ms;
+    background-color: #242429;
+  }
+  nav .content .normal .search ul.hidden {
+    display: none;
+  }
+  nav .content .normal .nav {
+    width: 30%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  nav .content .normal .nav .pricing {
+    margin-right: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  nav .content .normal .nav .pricing button {
+    background-color: transparent;
+    color: #242429;
+    -webkit-transition: 200ms;
+    transition: 200ms;
+    -webkit-box-shadow: 0px 3px 9px rgba(36, 36, 41, 0.06);
+            box-shadow: 0px 3px 9px rgba(36, 36, 41, 0.06);
+  }
+  nav .content .normal .nav .pricing button:hover {
+    color: #FBA020;
+    -webkit-transition: 200ms;
+    transition: 200ms;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  nav .content .normal .nav .auth {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  nav .content .normal .nav .auth button {
+    background-color: #FBA020;
+    color: white;
+    -webkit-box-shadow: 0px 3px 9px rgba(251, 160, 32, 0.06);
+            box-shadow: 0px 3px 9px rgba(251, 160, 32, 0.06);
+  }
+  nav .content .extend {
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    left: 0;
+    background-color: rgba(36, 36, 41, 0.08);
+  }
+  nav .content .extend .extend-content {
+    height: 100px;
+    width: 100%;
+    background-color: white;
+  }
   #mobile {
     display: none;
   }

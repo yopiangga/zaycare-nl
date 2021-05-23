@@ -33,17 +33,198 @@
 
     $fontPrimary : "Poppins";
 
-    $colorYellow : #FDBF1F;
-    $colorOrange : #ff7a57;
-    $colorBlueLight : #CDEEF6;
-    $colorPink : #F17EAB;
-    $colorRed : #F02424;
-    $colorGray : #C4C4C4;
-    $colorLight : #ECF0F3;
-    $colorDark : #393939;
+    // $colorYellow : #FF9300;
+    $colorYellow : #FBA020;
+    $colorPink : #E23D8B;
+    $colorGray : #898989;
+    $colorLight : #FAFAFA;
+    $colorDark : #242429;
     $colorBlack : #000D1E;
 
+    .App {
+        font-family: $fontPrimary;
+        font-size: 14px;
+        color: $colorDark;
 
+        button {
+            padding: 10px 20px 10px 20px;
+            border-radius: 20px;
+            border: 1px solid transparent;
+            cursor: pointer;                            
+        }
+    }
+
+    nav {
+        position: fixed;
+        z-index: 999;
+        min-height: 80px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        background-color: white;
+        box-shadow: 0px 5px 15px rgba($color: $colorDark, $alpha: 0.04);
+
+        .content {
+            width: 90%;
+            
+            .normal {
+                display: flex;
+                justify-content: space-between;
+                height: 80px;
+
+                .logo {
+                    width: 30%;
+                    display: flex;
+                    align-items: center;
+
+                    img {
+                        width: 150px;
+                    }
+                }
+
+                .search {
+                    width: 40%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .action-search:hover {
+                        box-shadow: 0px 3px 12px rgba($color: $colorDark, $alpha: 0.1);
+                    }
+
+                    .action-search {
+                        display: flex;
+                        box-shadow: 0px 3px 6px rgba($color: $colorDark, $alpha: 0.08);
+                        height: 45px;
+                        width: 300px;
+                        border-radius: 20px;
+                        align-items: center;
+                        justify-content: space-between;
+                        padding: 5px;
+                        box-sizing: border-box;
+                        cursor: pointer;
+
+                        .text {
+                            width: 250px;
+
+                            h4 {
+                                margin-left: 20px;
+                                color: $colorGray;
+                            }
+                        }
+
+                        .circle {
+                            width: 30px;
+                            height: 30px;
+                            background-color: $colorYellow;
+                            border-radius: 100%;
+                            color: white;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            margin-right: 5px;
+                            box-shadow: 0px 10px 20px rgba($color: $colorYellow, $alpha: 0.2);
+                        }
+                    }
+
+                    ul {
+                        height: 100%;
+                        display: flex;
+
+                        li {
+                            height: 100%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            padding: 0px 20px 0px 20px;
+                            cursor: pointer;
+                            position: relative;
+
+                            a {
+                                font-size: 16px;
+                                text-decoration: none;
+                                margin-bottom: 5px;
+                                color: $colorGray;
+                            }
+
+                            hr {
+                                position: absolute;
+                                width: 15px;
+                                height: 2px;
+                                background-color: transparent;
+                                border: none;
+                                transition: 200ms;
+                                bottom: 15px;
+                            }
+                        }
+
+                        li:hover {
+                            hr {
+                                transition: 200ms;
+                                background-color: $colorDark;
+                            }
+                        }
+                    }
+
+                    ul.hidden {
+                        display: none;
+                    }
+                }
+
+                .nav {
+                    width: 30%;
+                    display: flex;
+                    justify-content: flex-end;
+
+                    .pricing {
+                        margin-right: 10px;
+                        display: flex;
+                        align-items: center;
+
+                        button {
+                            background-color: transparent;
+                            color: $colorDark;
+                            transition: 200ms;
+                            box-shadow: 0px 3px 9px rgba($color: $colorDark, $alpha: 0.06);
+                        }
+
+                        button:hover {
+                            color: $colorYellow;
+                            transition: 200ms;
+                            box-shadow: none;
+                        }
+                    }
+
+                    .auth {
+                        display: flex;
+                        align-items: center;
+
+                        button {
+                            background-color: $colorYellow;
+                            color: white;
+                            box-shadow: 0px 3px 9px rgba($color: $colorYellow, $alpha: 0.06);
+
+                        }
+                    }
+                }
+            }
+
+            .extend {
+                position: absolute;
+                display: flex;
+                width: 100%;
+                height: 100vh;
+                left: 0;
+                background-color: rgba($color: $colorDark, $alpha: 0.08);
+
+                .extend-content {
+                    height: 100px;
+                    width: 100%;
+                    background-color: white;
+                }
+            }
+        }
+    }
 
     #mobile {
         display: none;

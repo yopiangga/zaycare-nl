@@ -14,6 +14,7 @@ import './assets/scss/mobileLandscape-style.css';
 import './assets/scss/mobile-style.css';
 
 import { UserContext, UserProvider } from "./page/userContext";
+import Home from "./page/Home";
 
 function App() {
 
@@ -21,7 +22,11 @@ function App() {
     <UserProvider>
       <BrowserRouter>
         <div className="App">
-
+          <Switch>
+            <Route path="/" exact>
+              <Home />
+            </Route>
+          </Switch>
         </div>
       </BrowserRouter>
     </UserProvider >
