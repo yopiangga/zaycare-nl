@@ -10,7 +10,7 @@ export default function Navbar() {
                         <img src={logo1} alt="Zaycare" />
                     </div>
                     <div className="search">
-                        <div className="action-search">
+                        <div className="action-search hidden">
                             <div className="text">
                                 <h4>Start your search</h4>
                             </div>
@@ -18,9 +18,11 @@ export default function Navbar() {
                                 <FiSearch />
                             </div>
                         </div>
-                        <ul className="hidden">
+                        <ul className="">
+                            <li><a>Home</a><hr /></li>
                             <li><a>Explore</a><hr /></li>
                             <li><a>Blog</a><hr /></li>
+                            <li><a>Contact</a><hr /></li>
                         </ul>
                     </div>
                     <div className="nav">
@@ -33,9 +35,24 @@ export default function Navbar() {
                     </div>
                 </div>
 
-                <div className="extend">
+                <div className="extend hidden">
                     <div className="extend-content">
-                        
+                        <div className="action-content">
+                            <div className="choose-location choose">
+                                <h5>Location</h5>
+                                <h4>Find a location where</h4>
+                            </div>
+                            <hr />
+                            <div className="choose-distance choose active">
+                                <h5>Distance</h5>
+                                <h4>What is the distance?</h4>
+                            </div>
+                            <hr />
+                            <div className="choose-type choose">
+                                <h5>Type</h5>
+                                <h4>What is teh type?</h4>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
