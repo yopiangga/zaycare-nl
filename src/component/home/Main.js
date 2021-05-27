@@ -10,14 +10,14 @@ export default function Main() {
             </div>
 
             <div className="content">
-                <div className="form-main">
+                <div className="form-main active">
                     <div className="action-content">
                         <div className="choose-location choose">
                             <h5>Location</h5>
                             <h4>Find a location where</h4>
                         </div>
                         <hr />
-                        <div className="choose-distance choose active">
+                        <div className="choose-distance choose">
                             <h5>Distance</h5>
                             <h4>What is the distance?</h4>
                         </div>
@@ -32,7 +32,7 @@ export default function Main() {
                     </div>
 
                     <form action="">
-                        <div className="form-group location active">
+                        <div className="form-group location">
                             <div className="location-content">
                                 <div className="box">
                                     <FiMapPin />
