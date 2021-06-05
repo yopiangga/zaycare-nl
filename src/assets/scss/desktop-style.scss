@@ -54,6 +54,10 @@
             border: 1px solid transparent;
             cursor: pointer;
         }
+
+        button.big {
+            padding: 12px 26px 12px 26px;
+        }
     }
 
     nav.navbar.active {
@@ -502,6 +506,56 @@
         }
     }
 
+    .footer {
+        width: 100%;
+        height: 120px;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .content {
+            height: 80px;
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .social-media {
+                width: 150px;
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 20px;
+
+                .circle {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 100%;
+                    background-color: $colorLight;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    transition: 150ms;
+                    font-size: 16px;
+                }
+
+                .circle:hover {
+                    background-color: $colorYellow;
+                    color: white;
+                    cursor: pointer;
+                    transition: 150ms;
+                }
+            }
+
+            .copyright {
+                h4 {
+                    font-size: 16px;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+
     .home-page {
 
         .main {
@@ -914,10 +968,49 @@
         }
 
         .location {
+            .content-body {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
 
+        .feature {
+
+            .content-body {
+                display: flex;
+                justify-content: center;
+                position: relative;
+                align-items: center;
+
+                img {
+                    width: 100%;
+                    // position: absolute;
+                }
+
+                .form {
+                    display: flex;
+                    position: absolute;
+                    align-items: center;
+
+                    h2 {
+                        font-size: 28px;
+                        font-weight: 600;
+                        margin-right: 20px;
+                    }
+
+                    button {
+                        background-color: $colorYellow;
+                        color: white;
+                    }
+                }
+            }
         }
 
     }
+
+
+
 
     // Element
     .container {
@@ -955,21 +1048,194 @@
     }
 
     .card-product {
+        margin: auto;
         width: 360px;
-        height: 320px;
+        height: 340px;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0px 3px 9px rgba($color: $colorDark, $alpha: 0.08);
 
         .card-top {
             width: 100%;
             height: 220px;
+            position: relative;
+
+            .bg {
+                width: 100%;
+                height: 100%;
+                background-color: rgba($color: $colorBlack, $alpha: 0.0);
+                position: absolute;
+                z-index: 2;
+
+                .box-icon {
+                    position: absolute;
+                    top: 20px;
+                    left: 20px;
+                    width: 25px;
+                    height: 40px;
+                    border-radius: 5px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border: 1px solid $colorYellow;
+                    color: $colorYellow;
+                }
+            }
 
             img {
+                z-index: 1;
+                position: relative;
                 width: 100%;
                 min-height: 100%;
             }
         }
 
         .card-bottom {
-            height: 100px;
+            height: 120px;
+            position: relative;
+            background-color: $colorYellow;
+            // overflow: hidden;
+            box-sizing: border-box;
+            z-index: 3;
+
+            .title {
+                transition: 300ms;
+                z-index: 4;
+                top: 0px;
+                background-color: white;
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                padding: 15px 20px 20px 20px;
+                width: 100%;
+                min-height: 90px;
+                // min-height: 80px;
+
+                h4 {
+                    font-weight: 500;
+                    font-size: 18px;
+                    margin-bottom: 10px;
+                    line-height: 28px;
+                }
+
+                .title-info {
+                    display: flex;
+                    align-items: center;
+
+                    h5 {
+                        margin-left: 10px;
+                        line-height: 24px;
+                    }
+                }
+            }
+
+            .card-footer {
+                z-index: 5;
+                background-color: white;
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                height: 70px;
+                display: flex;
+                justify-content: space-between;
+                padding: 0px 20px 0px 20px;
+                box-sizing: border-box;
+                align-items: center;
+
+                .type-card {
+                    display: flex;
+                    align-items: center;
+
+                    .circle {
+                        width: 35px;
+                        height: 35px;
+                        border-radius: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: white;
+                        background-color: $colorYellow;
+                        margin-right: 10px;
+                        font-size: 18px;
+                    }
+
+                    h4 {
+                        font-weight: 500;
+                    }
+                }
+
+                .action-card {
+                    display: flex;
+                    align-items: center;
+
+                    .circle {
+                        width: 35px;
+                        height: 35px;
+                        border-radius: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: $colorDark;
+                        background-color: rgba($color: $colorGray, $alpha: 0.2);
+                        margin-left: 10px;
+                        font-size: 18px;
+                        cursor: pointer;
+                        transition: 100ms;
+                    }
+
+                    .circle:hover {
+                        background-color: $colorYellow;
+                        color: white;
+                        transition: 100ms;
+                    }
+                }
+            }
+        }
+    }
+
+    .card-product:hover {
+
+        .card-top {
+
+            .bg {
+                width: 100%;
+                height: 100%;
+                background-color: rgba($color: $colorBlack, $alpha: 0.0);
+                position: absolute;
+                z-index: 2;
+
+                .box-icon {
+
+                }
+            }
+
+            img {
+
+            }
+        }
+
+        .card-bottom {
+
+            .title {
+                transition: 300ms;
+                top: -40px;
+                background-color: white;
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                padding: 15px 20px 20px 20px;
+                width: 100%;
+                min-height: 100px;
+
+                h4 {
+
+                }
+
+                .title-info {
+                    display: flex;
+                }
+            }
+
         }
     }
     // End Element

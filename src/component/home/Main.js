@@ -72,7 +72,7 @@ export default function Main() {
                     <h1>Ontdek & vergelijk de meest vertrouwde</h1>
                     <h1>Kinderopvang & BSO</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod nulla dicta rerum quo maiores in iure voluptatum error Aliquam, reprehenderit.</p>
-                    <button>Explore Further</button>
+                    <button className="big">Explore Further</button>
                 </div>
             </div>
         </div>
