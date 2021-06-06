@@ -41,7 +41,11 @@
     $colorDark : #242429;
     $colorBlack : #000D1E;
 
-    $colorPurple : #6a07ff;
+    $purple : #6a07ff;
+    $pink : #ff4fc1;
+    $blue : #3dc8ff;
+    $orange : #ff8c35;
+    $green: #4bd1ab;
 
     .App {
         font-family: $fontPrimary;
@@ -195,6 +199,422 @@
                             hr {
                                 transition: 200ms;
                                 background-color: white;
+                            }
+                        }
+                    }
+
+                    ul.hidden {
+                        display: none;
+                    }
+                }
+
+                .nav {
+                    width: 30%;
+                    display: flex;
+                    justify-content: flex-end;
+
+                    .pricing {
+                        margin-right: 10px;
+                        display: flex;
+                        align-items: center;
+
+                        button {
+                            background-color: white;
+                            color: $colorDark;
+                            transition: 200ms;
+                            box-shadow: 0px 3px 9px rgba($color: $colorDark, $alpha: 0.06);
+                        }
+
+                        button:hover {
+                            color: $colorYellow;
+                            transition: 200ms;
+                            box-shadow: none;
+                        }
+                    }
+
+                    .auth {
+                        display: flex;
+                        align-items: center;
+
+                        button {
+                            background-color: $colorYellow;
+                            color: white;
+                            box-shadow: 0px 3px 9px rgba($color: $colorYellow, $alpha: 0.06);
+
+                        }
+                    }
+                }
+            }
+
+            .extend.active {
+                display: flex;
+            }
+            
+            .extend {
+                display: none;
+                position: absolute;
+                width: 100%;
+                height: 100vh;
+                left: 0;
+                justify-content: center;
+                background-color: rgba($color: $colorDark, $alpha: 0.08);
+
+                .extend-content {
+                    background-color: white;
+                    width: 100%;
+                    height: 240px;
+                    display: flex;
+                    justify-content: center;
+
+                    .form-main {
+                        position: relative;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        min-height: 200px;
+                        width: 760px;
+    
+                        .action-content {
+                            width: 700px;
+                            height: 65px;
+                            background-color: $colorLight;
+                            border: 1px solid rgba($color: $colorDark, $alpha: 0.3);
+                            border-radius: 65px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            padding: 0px 30px 0px 30px;
+                            position: relative;
+                            margin-bottom: 10px;
+    
+                            hr {
+                                height: 30px;
+                                width: 1px;
+                                border: none;
+                                background-color: $colorGray;
+                            }
+    
+                            .choose {
+                                height: 100%;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                position: relative;
+    
+                                h5 {
+                                    margin-bottom: 10px;
+                                    font-size: 12px;
+                                    font-weight: 500;
+                                    margin-left: 15px;
+                                }
+    
+                                h4 {
+                                    margin-left: 15px;
+                                    font-size: 14px;
+                                    color: $colorGray;
+                                }
+                            }
+    
+                            .circle {
+                                position: absolute;
+                                right: 5px;
+                                background-color: $colorYellow;
+                                height: 55px;
+                                width: 55px;
+                                border-radius: 100%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                color: white;
+                                font-size: 24px;
+                            }
+    
+                            .choose-location {
+                                width: 33%;
+                            }
+    
+                            .choose-location.active {
+                                position: absolute;
+                                z-index: 2;
+                            }
+    
+                            .choose-distance {
+                                width: 33%;
+                            }
+    
+                            .choose-type {
+                                width: 33%;
+                            }
+                        }
+    
+                        form {
+                            display: flex;
+                            justify-content: center;
+    
+                            .form-group {
+                                border-radius: 30px;
+                                position: absolute;
+                                width: 300px;
+                                min-height: 50px;
+                                background-color: white;
+                                box-shadow: 0px 5px 15px rgba($color: $colorDark, $alpha: 0.1);
+                                padding: 30px 20px 30px 20px;
+                                display: none;
+    
+                                .location-content {
+                                    display: flex;
+                                    align-items: center;
+    
+                                    .box {
+                                        width: 45px;
+                                        height: 45px;
+                                        border: 1px solid $colorGray;
+                                        border-radius: 10px;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        font-size: 24px;
+                                        color: $colorYellow;
+                                        margin-right: 20px;
+                                    }
+    
+                                    .text {
+                                        h4 {
+                                            font-size: 16px;
+                                            color: $colorGray;
+                                        }
+                                    }
+                                }
+    
+                                .distance-content {
+                                    position: relative;
+                                    width: 100%;
+    
+                                    .text {
+                                        margin-bottom: 20px;
+                                        h4 {
+                                            span {
+                                                font-weight: 500;
+                                            }
+                                        }
+                                    }
+    
+                                    .card-slider {
+                                        margin-bottom: 20px;
+                                        position: relative;
+            
+                                        .bg-range {
+                                            background-color: $colorYellow;
+                                            opacity: 0.7;
+                                            height: 15px;
+                                            position: absolute;
+                                            top: 2px;
+                                            border-radius: 15px 0px 0px 15px;
+                                            z-index: 8;
+                                        }
+            
+                                        .slider {
+                                            -webkit-appearance: none;
+                                            appearance: none;
+                                            width: 100%;
+                                            height: 15px;
+                                            background: $colorLight;
+                                            outline: none;
+                                            // opacity: 0.7;
+                                            -webkit-transition: .2s;
+                                            transition: opacity .2s;
+                                            border-radius: 15px;
+                                            
+                                        }
+            
+                                        .slider:hover {
+                                            opacity: 1;
+                                        }
+            
+                                        .slider::-webkit-slider-thumb {
+                                            -webkit-appearance: none;
+                                            appearance: none;
+                                            width: 30px;
+                                            height: 30px;
+                                            background: $colorYellow;
+                                            box-shadow: 0px 5px 15px rgba($color: $colorYellow, $alpha: 0.5);
+                                            cursor: pointer;
+                                            border-radius: 50%;
+                                            position: relative;
+                                            z-index: 9;
+                                        }
+            
+                                        .slider::-moz-range-thumb {
+                                            width: 30px;
+                                            height: 30px;
+                                            background: $colorYellow;
+                                            border-radius: 50%;
+                                            cursor: pointer;
+                                        }
+                                    }
+                                }
+    
+                                .type-content {
+                                    width: 100%;
+    
+                                    ul {
+    
+                                        li {
+                                            margin-bottom: 20px;
+    
+                                            h4 {
+                                                font-weight: 500;
+                                                font-size: 16px;
+                                            }
+    
+                                            p {
+                                                line-height: 24px;
+                                                color: $colorGray;
+                                            }
+    
+                                            hr {
+                                                display: block;
+                                                margin-top: 10px;
+                                                height: 1px;
+                                                width: 100%;
+                                                background-color: rgba($color: $colorDark, $alpha: 0.1);
+                                                border: none;
+                                            }
+                                        }
+    
+                                        li:last-child {
+                                            margin-bottom: 0;
+                                        }
+                                    }
+                                }
+                            }
+    
+                            .location.active {
+                                left: 0;
+                                display: flex;
+                            }
+    
+                            .distance.active {
+                                // left: 0;
+                                display: flex;
+                            }
+    
+                            .type.active {
+                                right: 0;
+                                display: flex;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    nav.navbar.light {
+
+        .content {
+
+            .normal {
+
+                .search {
+
+                    .action-search.active {
+                        display: flex;
+                    }
+
+                    .action-search:hover {
+                        box-shadow: 0px 3px 12px rgba($color: $colorDark, $alpha: 0.1);
+                    }
+
+                    .action-search {
+                        display: none;
+                        box-shadow: 0px 3px 6px rgba($color: $colorDark, $alpha: 0.08);
+                        height: 45px;
+                        width: 300px;
+                        border-radius: 20px;
+                        align-items: center;
+                        justify-content: space-between;
+                        padding: 5px;
+                        box-sizing: border-box;
+                        cursor: pointer;
+
+                        .text {
+                            width: 250px;
+
+                            h4 {
+                                margin-left: 20px;
+                                color: $colorGray;
+                            }
+                        }
+
+                        .circle {
+                            width: 30px;
+                            height: 30px;
+                            background-color: $colorYellow;
+                            border-radius: 100%;
+                            color: white;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            margin-right: 5px;
+                            box-shadow: 0px 10px 20px rgba($color: $colorYellow, $alpha: 0.2);
+                        }
+                    }
+
+                    ul.active {
+                        display: flex;
+                    }
+
+                    ul.dark {
+                        li {
+                            a {
+                                color: $colorGray;
+                            }
+                        }
+
+                        li:hover {
+                            hr {
+                                background-color: $colorDark;
+                            }
+                        }
+                    }
+
+                    ul {
+                        color: $colorGray;
+                        height: 100%;
+                        display: none;
+
+                        li {
+                            height: 100%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            padding: 0px 20px 0px 20px;
+                            cursor: pointer;
+                            position: relative;
+
+                            a {
+                                font-size: 16px;
+                                text-decoration: none;
+                                margin-bottom: 5px;
+                                color: $colorGray;
+                            }
+
+                            hr {
+                                position: absolute;
+                                width: 15px;
+                                height: 2px;
+                                background-color: transparent;
+                                border: none;
+                                transition: 200ms;
+                                bottom: 15px;
+                            }
+                        }
+
+                        li:hover {
+                            hr {
+                                transition: 200ms;
+                                background-color: $colorDark;
                             }
                         }
                     }
@@ -898,11 +1318,11 @@
                         cursor: pointer;
 
                         .bg.bg-purple {
-                            background-color: rgba($color: $colorPurple, $alpha: 0.8);
+                            background-color: rgba($color: $purple, $alpha: 0.8);
                         }
 
                         .bg.bg-purple:hover {
-                            background-color: rgba($color: $colorPurple, $alpha: 0.9);
+                            background-color: rgba($color: $purple, $alpha: 0.9);
                         }
 
                         .bg {
@@ -915,11 +1335,14 @@
                             justify-content: center;
                             align-items: center;
                             transition: 150ms;
+                            flex-direction: column;
+                            font-size: 28px;
+                            color: white;
 
                             h4 {
+                                margin-top: 20px;
                                 font-size: 20px;
                                 font-weight: 500;
-                                color: white;
                             }
                         }
 
@@ -1007,6 +1430,132 @@
             }
         }
 
+    }
+
+    .createListing-page {
+        
+        .main {
+            padding-top: 160px;
+            padding-bottom: 80px;
+            background-color: $colorLight;
+            // min-height: 100vh;
+
+            .content-body {
+                display: flex;
+                flex-wrap: wrap;
+                
+                .card-listing {
+                    margin-right: auto;
+                    margin-bottom: 30px;
+                    width: 350px;
+                    height: 120px;
+                    position: relative;
+                    transform-style: preserve-3d;
+                    transition: 300ms;
+                    cursor: pointer;
+                    
+                    .cube__face {
+                        height: 100%;
+                        width: 100%;
+                        border-radius: 5px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                    .cube__face--front {
+                        background-color: white;
+                        border: 1px solid rgba($color: $colorDark, $alpha: 0.1);
+                        transform: rotateX(0deg) translateZ(100px);
+
+                        .circle {
+                            width: 40px;
+                            height: 40px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            border-radius: 100%;
+                            color: white;
+                            margin-bottom: 10px;
+                        }
+                        
+                    }
+
+                    .cube__face--bottom {
+                        transform: rotateX(90deg) translateZ(100px);
+                        position: relative;
+
+                        h4 {
+                            position: absolute;
+                            color: white;
+                            bottom: 10px;
+                        }
+                    }
+                                        
+                }
+
+                .card-listing:hover {
+                    transform: translateZ(-100px) rotateX(-90deg);
+                    transition: 300ms;
+
+                    .cube__face--bottom h4 {
+                        transition: 300ms;
+                        bottom: 50px;
+                    }
+                }
+
+                .card-listing.card-purple {
+                    .circle {
+                        background-color: $purple;
+                    }
+
+                    .cube__face--bottom {
+                        background-color: $purple;
+                    }
+                }
+
+                .card-listing.card-pink {
+                    .circle {
+                        background-color: $pink;
+                    }
+
+                    .cube__face--bottom {
+                        background-color: $pink;
+                    }
+                }
+
+                .card-listing.card-blue {
+                    .circle {
+                        background-color: $blue;
+                    }
+
+                    .cube__face--bottom {
+                        background-color: $blue;
+                    }
+                }
+
+                .card-listing.card-orange {
+                    .circle {
+                        background-color: $orange;
+                    }
+
+                    .cube__face--bottom {
+                        background-color: $orange;
+                    }
+                }
+
+                .card-listing.card-green {
+                    .circle {
+                        background-color: $green;
+                    }
+
+                    .cube__face--bottom {
+                        background-color: $green;
+                    }
+                }
+            }
+        }
     }
 
 

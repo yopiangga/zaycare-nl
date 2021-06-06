@@ -15,6 +15,7 @@ import './assets/scss/mobile-style.css';
 
 import { UserContext, UserProvider } from "./page/userContext";
 import Home from "./page/Home";
+import CreateListing from "./page/CreateListing";
 
 function App() {
 
@@ -25,6 +26,9 @@ function App() {
           <Switch>
             <Route path="/" exact>
               <Home />
+            </Route>
+            <Route path="/create-listing" exact>
+              <CreateListing />
             </Route>
           </Switch>
         </div>

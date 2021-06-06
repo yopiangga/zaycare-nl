@@ -8,6 +8,7 @@ import nightlife from './../../assets/images/nightlife.jpg';
 import restaurant from './../../assets/images/restaurant.jpg';
 import event from './../../assets/images/event.jpg';
 import outdoor from './../../assets/images/outdoor.jpg';
+import { FiActivity, FiCoffee, FiFilm, FiGift, FiHome, FiMap, FiMapPin, FiMusic, FiYoutube } from 'react-icons/fi';
 
 export default function Category() {
     return(
@@ -20,42 +21,49 @@ export default function Category() {
                 <div className="content-body">
                     <div className="box box-6">
                         <div className="bg bg-purple">
+                            <FiMapPin />
                             <h4>Explore places</h4>
                         </div>
                         <img src={explore} alt="" />
                     </div>
                     <div className="box box-6">
                         <div className="bg">
+                            <FiMusic />
                             <h4>Nightlife</h4>
                         </div>
                         <img src={nightlife} alt="" />
                     </div>
                     <div className="box box-3">
                         <div className="bg">
+                            <FiFilm />
                             <h4>Cinema</h4>
                         </div>
                         <img src={cinema} alt="" />
                     </div>
                     <div className="box box-3">
                         <div className="bg">
+                            <FiCoffee />
                             <h4>Restaurant</h4>
                         </div>
                         <img src={restaurant} alt="" />
                     </div>
                     <div className="box box-3">
                         <div className="bg">
+                            <FiActivity />
                             <h4>Gym & Fitness</h4>
                         </div>
                         <img src={fitnes} alt="" />
                     </div>
                     <div className="box box-3">
                         <div className="bg">
+                            <FiHome />
                             <h4>Art & History</h4>
                         </div>
                         <img src={history} alt="" />
                     </div>
                     <div className="box box-3">
                         <div className="bg">
+                            <FiMap />
                             <h4>Outdoor Activities</h4>
                         </div>
                         <img src={outdoor} alt="" />
@@ -66,6 +74,7 @@ export default function Category() {
                     </div>
                     <div className="box box-6">
                         <div className="bg bg-purple">
+                            <FiGift />
                             <h4>Discover Events</h4>
                         </div>
                         <img src={event} alt="" />
